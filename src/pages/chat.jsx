@@ -13,7 +13,7 @@ export default function ChatPage() {
 
   const [friend, setFriend] = useState(null);
   const [messages, setMessages] = useState();
-  const = useState('');
+  const [inputText, setInputText] = useState('');
   const [loading, setLoading] = useState(true);
 
   const scrollRef = useRef(null);
