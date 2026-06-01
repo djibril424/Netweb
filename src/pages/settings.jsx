@@ -12,7 +12,7 @@ export default function SettingsPage() {
   const [username, setUsername] = useState(profile?.username || '');
   const [handle, setHandle] = useState(profile?.handle || '');
   const [avatarUrl, setAvatarUrl] = useState(profile?.avatar_url || '');
-  const = useState(profile?.bio || '');
+  const [bio, setBio] = useState(profile?.bio || '');
   const [password, setPassword] = useState('');
   const [updating, setUpdating] = useState(false);
 
