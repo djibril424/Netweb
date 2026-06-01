@@ -48,7 +48,7 @@ export default function FeedPage() {
       .order('created_at', { ascending: false });
 
       if (pError) throw pError;
-      setPosts(activePosts ||);
+     setPosts(activePosts || []);
     } catch (err) {
       console.error('Error fetching feed', err);
     } finally {
