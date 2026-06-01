@@ -14,7 +14,7 @@ export const AuthContext = createContext({
 export const useAuth = () => useContext(AuthContext);
 
 export default function App() {
-  const = useState(null);
+  const [session, setSession] = useState(null);
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
