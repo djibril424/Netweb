@@ -92,4 +92,9 @@ const LoginPage = () => {
   );
 };
 
-export const router = createHashRouter();
+export const router = createHashRouter([
+  {
+    path: '/',
+    element: <AuthGuard><FeedPage /></AuthGuard>
+  }
+]);
