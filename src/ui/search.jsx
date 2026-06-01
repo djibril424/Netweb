@@ -8,7 +8,7 @@ import UserPreview from './user.jsx';
 export default function SearchBar() {
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
-  const = useState();
+  const [results, setResults] = useState([]);
   const [focused, setFocused] = useState(false);
   const containerRef = useRef(null);
 
