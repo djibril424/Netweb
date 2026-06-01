@@ -38,7 +38,7 @@ export default function ChatPage() {
         .order('created_at', { ascending: true });
 
         if (mError) throw mError;
-        setMessages(msgs ||);
+        setMessages(msgs || []);
       } catch (err) {
         console.error('Error in chat loading', err);
         navigate('/feed');
