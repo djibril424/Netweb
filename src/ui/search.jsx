@@ -27,7 +27,7 @@ export default function SearchBar() {
         .limit(5);
 
         if (error) throw error;
-        setResults(data ||);
+        setResults(data || []);
       } catch (err) {
         console.error('Error fetching search results', err);
       }
