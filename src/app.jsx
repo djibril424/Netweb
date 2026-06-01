@@ -43,7 +43,7 @@ export default function App() {
       } else {
         setLoading(false);
       }
-    });
+    }, []);
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
