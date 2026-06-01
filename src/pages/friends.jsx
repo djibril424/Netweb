@@ -8,7 +8,7 @@ import BottomNav from '../ui/nav.jsx';
 
 export default function FriendsPage() {
   const { profile } = useAuth();
-  const = useState();
+  const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const fetchRequests = async () => {
