@@ -133,7 +133,7 @@ export default function ProfilePage({ welcomeMode = false }) {
             .order('created_at', { ascending: false });
 
             if (postsError) throw postsError;
-            setPosts(friendPosts ||);
+            setPosts(friendPosts ||[]);
           } else {
             const { data: sentReq, error: srError } = await supabase
             .from('friend_requests')
