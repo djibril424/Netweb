@@ -98,7 +98,7 @@ export default function ProfilePage({ welcomeMode = false }) {
           .order('created_at', { ascending: false });
 
           if (postsError) throw postsError;
-          setPosts(activePosts ||);
+         setPosts(activePosts || []);
         } else {
           const [u1, u2] = myProfile.id < targetId? [myProfile.id, targetId] : [targetId, myProfile.id];
           const { data: friends, error: fError } = await supabase
