@@ -32,7 +32,7 @@ export default function FriendsPage() {
       .eq('status', 'pending');
 
       if (error) throw error;
-      setRequests(data ||);
+      setRequests(data || []);
     } catch (err) {
       console.error('Error fetching requests', err);
     } finally {
