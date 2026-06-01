@@ -8,7 +8,7 @@ export default function CreatePage() {
   const { profile } = useAuth();
   const navigate = useNavigate();
   const [content, setContent] = useState('');
-  const = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const handlePostSubmit = async (e) => {
     e.preventDefault();
