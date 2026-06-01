@@ -16,14 +16,19 @@ export default function ProfilePage({ welcomeMode = false }) {
   const isSelf = welcomeMode ||!userId || userId === myProfile?.id;
   const targetId = isSelf? (welcomeMode? session?.user?.id : myProfile?.id) : userId;
 
-  const = useState(null);
-  const = useState({ username: '', handle: '', bio: '', avatarUrl: '' });
+  const [targetProfile, setTargetProfile] = useState(null);
+  const [welcomeForm, setWelcomeForm] = useState({
+  username:'',
+  handle:'',
+  bio:'',
+  avatarUrl:''
+});
   const [posts, setPosts] = useState();
-  const = useState('none');
+  const [friendshipStatus, setFriendshipStatus] = useState('none');
   const [friendCount, setFriendCount] = useState(0);
-  const = useState(0);
+  const [requestCount, setRequestCount] = useState(0);
   const [loading, setLoading] = useState(true);
-  const = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     if (welcomeMode) {
